@@ -7,3 +7,5 @@ RUN sudo apt update -y && sudo apt upgrade -y && \
 	python3-coverage-test-runner python-unittest2 python3-unittest2 python3-venv python3.8-venv \
 	python3.9-venv python3-pip && \
         sudo pip3 install --upgrade pip
+
+RUN sudo pip3 install git+https://github.com/LaboratoryOfPlasmaPhysics/teamcity_rest_client
