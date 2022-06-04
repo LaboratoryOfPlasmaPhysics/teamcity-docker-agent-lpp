@@ -1,4 +1,4 @@
-FROM jetbrains/teamcity-agent:2022.04-linux-sudo
+FROM jetbrains/teamcity-agent:2022.04.1-linux-sudo
 
 ADD daemon.json /etc/docker/daemon.json
 
