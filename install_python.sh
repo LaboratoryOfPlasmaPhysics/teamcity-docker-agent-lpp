@@ -14,6 +14,7 @@ install_python () {
   sudo rm -rf /tmp/build-python-$2
   python$2 --version
   curl -sS https://bootstrap.pypa.io/get-pip.py | python$2
+  python$2 -m pip install --upgrade pip 
   python$2 -m pip install virtualenv pytest coverage unittest2 pytest-cov tox
 }
 
@@ -25,4 +26,4 @@ install_python https://www.python.org/ftp/python/3.12.7/Python-3.12.7.tar.xz 3.1
 install_python https://www.python.org/ftp/python/3.13.0/Python-3.13.0.tar.xz 3.13 altinstall
 
 curl -sS https://bootstrap.pypa.io/get-pip.py | python3.8
-
+python3.8 -m pip install --upgrade pip
