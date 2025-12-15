@@ -1,4 +1,4 @@
-FROM jetbrains/teamcity-agent:2025.11-linux-sudo
+FROM jetbrains/teamcity-agent:2025.11.1-linux-sudo
 
 ADD daemon.json /etc/docker/daemon.json
 ADD install_python.sh /tmp/install_python.sh
