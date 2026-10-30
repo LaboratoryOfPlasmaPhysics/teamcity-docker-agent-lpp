@@ -19,6 +19,9 @@ RUN bash /tmp/install_python.sh
 # nobody (65534) fail to unpack.
 FROM base AS podman
 ADD podman/containers.conf /etc/containers/containers.conf
+ADD podman/registries.conf /etc/containers/registries.conf.d/00-docker-hub.conf
+# TeamCity's Docker steps only run on agents reporting a Docker server; Podman serves them through podman-docker.
+ENV AGENT_OPTS="docker.server.version=4.9.3"
 RUN sudo apt purge -yqq docker-ce docker-ce-cli docker-ce-rootless-extras docker-buildx-plugin \
         docker-compose-plugin containerd.io && \
     sudo apt install -yqq podman podman-docker uidmap && \
