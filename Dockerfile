@@ -1,4 +1,4 @@
-FROM jetbrains/teamcity-agent:2026.2.1-linux-sudo
+FROM jetbrains/teamcity-agent:2026.2.2-linux-sudo
 
 ADD install_python.sh /tmp/install_python.sh
 
